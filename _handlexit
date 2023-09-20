@@ -1,0 +1,38 @@
+#include "shell.h"
+
+/**
+  * _handle_exit - ...
+  * @lc_tokns: cmd
+  * @line: ...
+  *
+  * Return: Nothing to returns
+  */
+void _handle_exit(char **lc_tokns, char *line)
+{
+	int status = 0;
+
+	if (lc_tokns[1] == NULL || (!_strcmp(lc_tokns[1], "0")))
+	{
+		frees_tokens(lc_tokns);
+		free(line);
+		exit(0);
+	}
+	status = _atoi(lc_tokns[1]);
+	if (status != 0)
+	{
+		frees_tokens(lc_tokns);
+		free(line);
+		exit(status);
+	}
+	else
+	{
+		_puts("exit: Number not permit: ");
+		_puts(lc_tokns[1]);
+		_puts("\n");
+		exit(2);
+	}
+
+	frees_tokens(lc_tokns);
+	free(line);
+	exit(EXIT_SUCCESS);
+}
