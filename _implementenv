@@ -6,6 +6,7 @@
   *
   * Return: The content of the environment variable
   */
+
 char *_getenv(const char *name)
 {
 	int i = 0;

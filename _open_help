@@ -5,6 +5,7 @@
  *
  * Return: return 0.
  */
+
 void _open_help(void)
 {
 	_puts("\n******\n");
