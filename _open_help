@@ -1,0 +1,12 @@
+#include "shell.h"
+
+/**
+ * _open_help - Opens help
+ *
+ * Return: return 0.
+ */
+
+void _open_help(void)
+{
+	_puts("\n******\n");
+}
